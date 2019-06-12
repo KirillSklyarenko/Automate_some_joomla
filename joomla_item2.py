@@ -1,8 +1,5 @@
 #! python3
 
-# updated. Removed def statements for header, alias and fulltext.
-# fulltext is sent to textarea by ctrl+v (faster)
-
 import pyperclip
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -14,15 +11,15 @@ driver = webdriver.Chrome()
 
 wait_time = 20
 
-sitename = r'https://translate-eng-china.ru'
+sitename = r'https://___.com'
 
-file = r'C:\translate\1.txt'
+file = r'C:\___'
 
-cat_item = "- - - - - Пояснительная записка"
+cat_item = "___"
 
-menu_name = "Статьи: законы Великобритании и теория перевода"
+menu_name = "___"
 
-cat_menu = "- - Пояснительная записка"
+cat_menu = "___"
 
 with open(file) as f:
     file_text = f.read().splitlines()
@@ -34,12 +31,12 @@ with open(file) as f:
 #    fulltext = "".join(file_text[n2+1:])
     fulltext_c = pyperclip.copy("\n".join(file_text[n2 + 1:]))
 
-driver.get(f'{sitename}/administrator/index.php?token=200484')
+driver.get(f'{sitename}/administrator/')
 
 passwd = driver.find_element_by_id('mod-login-password')
-passwd.send_keys('n4t8y9y3b5c7y6frhjdfnbe[')
+passwd.send_keys('___[')
 username = driver.find_element_by_id('mod-login-username')
-username.send_keys('kirill')
+username.send_keys('___')
 
 button = driver.find_element_by_class_name('btn-group')
 button.click()
